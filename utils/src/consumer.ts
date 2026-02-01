@@ -29,12 +29,12 @@ export const startSendMailConsumer = async () => {
                     );
 
                     const transporter = nodemailer.createTransport({
-                        host: "smtp.gmail.com",
+                        host: process.env.HOST,
                         port: 465,
                         secure: true,
                         auth: {
-                            user: "xyz",
-                            pass: "yzx"
+                            user: process.env.AUTH_USER,
+                            pass: process.env.AUTH_PASSWORD
                         }
                     });
 
