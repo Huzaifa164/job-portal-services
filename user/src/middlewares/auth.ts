@@ -2,7 +2,7 @@ import type { NextFunction, Request, Response } from "express";
 import jwt, { type JwtPayload } from 'jsonwebtoken';
 import { sql } from "../utils/db.js";
 
-interface User {
+export interface User {
     user_id: number;
     name: string;
     email: string;
